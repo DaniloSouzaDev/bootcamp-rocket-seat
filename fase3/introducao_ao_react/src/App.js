@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
+import TechList from "./components/TechList.js";
+// import profile from "./assets/profile.jpg";
 function App() {
-  return <h1> Olá 2B Egggkkkkkducação. </h1>;
+  return <TechList />
 }
 export default App;
