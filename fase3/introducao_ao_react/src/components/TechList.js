@@ -1,7 +1,7 @@
 import React, { Component } from "react"; 
 class TechList extends Component {
   state = {
-    newTech: ' ',
+    newTech: '',
     techs: [
       "node.js",
       "React",
