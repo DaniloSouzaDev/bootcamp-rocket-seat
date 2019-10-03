@@ -5,9 +5,7 @@ class TechList extends Component {
     techs: [
       "node.js",
       "React",
-      "Reavt Native",
-      "HTML",
-      "CSS"
+      "Reavt Native"
     ]
   };
 
