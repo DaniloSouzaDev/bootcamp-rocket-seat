@@ -78,10 +78,16 @@ export const List = styled.ul`
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    position: relative;
 
     & + li {
       border-top: solid 1px #eee;
     }
+  }
+
+  li > button:first-of-type {
+    position: absolute;
+    right: 70px;
   }
 
   a {

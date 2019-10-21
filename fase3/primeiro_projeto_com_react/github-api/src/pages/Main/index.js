@@ -1,7 +1,10 @@
+/* eslint-disable react/state-in-constructor */
+/* eslint-disable react/sort-comp */
 import React, { Component } from 'react';
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { Container, Form, SubmitButton, List } from './styles';
+import Container from '../../components/Container';
+import { Form, SubmitButton, List } from './styles';
 import api from '../../Services/api';
 
 export default class Main extends Component {
@@ -21,6 +24,7 @@ export default class Main extends Component {
     const { newRepo, repositories } = this.state;
     const response = await api.get(`/repos/${newRepo}`);
     const data = {
+      id: response.data.id,
       name: response.data.full_name,
     };
 
@@ -37,6 +41,7 @@ export default class Main extends Component {
     if (repositories) {
       this.setState({ repositories: JSON.parse(repositories) });
     }
+    console.log(repositories);
   }
 
   // Salva no localStorage
