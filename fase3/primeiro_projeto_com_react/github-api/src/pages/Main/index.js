@@ -41,7 +41,6 @@ export default class Main extends Component {
     if (repositories) {
       this.setState({ repositories: JSON.parse(repositories) });
     }
-    console.log(repositories);
   }
 
   // Salva no localStorage
@@ -71,16 +70,16 @@ export default class Main extends Component {
 
           <SubmitButton loading={loading}>
             {loading ? (
-              <FaSpinner clor="#fff" size={14} />
+              <FaSpinner color="#fff" size={14} />
             ) : (
-              <FaPlus clor="#fff" size={14} />
+              <FaPlus color="#fff" size={14} />
             )}
           </SubmitButton>
         </Form>
 
         <List>
           {repositories.map(repository => (
-            <li key={repository.name}>
+            <li key={repository.id}>
               <span>{repository.name}</span>
               <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
                 Detalhes
